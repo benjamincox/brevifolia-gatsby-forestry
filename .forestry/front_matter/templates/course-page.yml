@@ -1,4 +1,28 @@
 ---
 label: Course Page
 hide_body: false
-fields: []
+fields:
+- name: page_title
+  type: text
+  config:
+    required: true
+  label: Page Title
+  description: Enter a title for this page
+- name: url_path
+  type: text
+  config:
+    required: true
+  label: URL Path
+  description: Path to this page on the server (starts with /)
+  default: "/{title.toLowerCase}"
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
+  description: "(Optional) A full description to help search engines if this page
+    is public"
